@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+for dir in ./*/
+do
+    echo $dir
+    cd $dir
+
+    gifsicle --batch --optimize=3 --resize 542x_ --resize-method 'lanczos3' --resize-colors 64 dilation.gif
+    gifsicle --batch --optimize=3 --resize 542x_ --resize-method 'lanczos3' --resize-colors 64 voronoi.gif
+    gifsicle --batch --optimize=3 --resize 542x_ --resize-method 'lanczos3' --resize-colors 64 mixed.gif
+
+    cd ..
+done
