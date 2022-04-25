@@ -127,7 +127,7 @@
     }
   }
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 820px) {
     .Preview {
       padding: 0 1rem;
 
