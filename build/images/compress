@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+for dir in ./*/
+do
+    echo $dir
+    cd $dir
+
+    gifsicle --batch --optimize=3 dilation.gif
+    gifsicle --batch --optimize=3 voronoi.gif
+    gifsicle --batch --optimize=3 mixed.gif
+
+    cd ..
+done
