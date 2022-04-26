@@ -11,19 +11,19 @@ export const animals = [
 ]
 
 export const countries = [
-  'austria',
-  'belgium',
-  'croatia',
-  'czechia',
-  'france',
-  'germany',
-  'greece',
-  'ireland',
-  'italy',
-  'netherlands',
-  'poland',
-  'spain',
-  'sweden',
+  'Austria',
+  'Belgium',
+  'Croatia',
+  'Czechia',
+  'France',
+  'Germany',
+  'Greece',
+  'Ireland',
+  'Italy',
+  'Netherlands',
+  'Poland',
+  'Spain',
+  'Sweden',
 ]
 
 export const letters = ['try-it', 'wish-luck', 'kick-stuff', 'u', 'i', 'f']

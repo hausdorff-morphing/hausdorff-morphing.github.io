@@ -33,7 +33,7 @@
   </section>
 
   <section>
-    <h2>Letters</h2>
+    <h2>Text</h2>
 
     <MorphSelector data={letters} single on:choose={setMorph} />
   </section>

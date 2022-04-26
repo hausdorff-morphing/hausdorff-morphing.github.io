@@ -19,23 +19,29 @@
 
 <div class="MorphSelector">
   {#if !single}
-    From
-    <select bind:value={from}>
-      <option value={''} disabled selected>&mdash;</option>
-      {#each fromData as from}
-        <option value={from}>{from}</option>
-      {/each}
-    </select>
-
-    to
+    <div>
+      From
+      <select bind:value={from}>
+        <option value={''} disabled selected>&mdash;</option>
+        {#each fromData as from}
+          <option value={from.toLowerCase()}>{from}</option>
+        {/each}
+      </select>
+    </div>
   {/if}
 
-  <select bind:value={to}>
-    <option value={''} disabled selected>&mdash;</option>
-    {#each toData as to}
-      <option value={to}>{to}</option>
-    {/each}
-  </select>
+  <div>
+    {#if !single}
+      to
+    {/if}
+
+    <select bind:value={to}>
+      <option value={''} disabled selected>&mdash;</option>
+      {#each toData as to}
+        <option value={to.toLowerCase()}>{to}</option>
+      {/each}
+    </select>
+  </div>
 
   <button on:click={choose} disabled={single ? !to : !from || !to}>View &rsaquo;</button>
 </div>
@@ -43,12 +49,24 @@
 <style>
   .MorphSelector {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    gap: 1rem;
+    gap: 0.5rem;
 
     font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 600px) {
+    .MorphSelector {
+      flex-direction: row;
+    }
+  }
+
+  .MorphSelector > div {
+    display: flex;
+    gap: 0.5rem;
   }
 
   select {
